@@ -18,7 +18,7 @@ public class mini_assignment_1
                 get("https://jsonplaceholder.typicode.com/posts").
 
                 then().
-                statusCode(200).extract().response();
+                statusCode(200).log().status().log().headers().extract().response();
         assertThat(response.path("[39].userId"), is(equalTo(4)));
         JSONArray arr = new JSONArray(response.asString());
         int Auto= 1;
