@@ -10,9 +10,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import java.io.File;
 public class task_1 {
-    /*
-     * We set same baseUri and basePath for both request.
-     */
     @Test
     public void Request1() {
         RequestSpecification request = RestAssured.given();
