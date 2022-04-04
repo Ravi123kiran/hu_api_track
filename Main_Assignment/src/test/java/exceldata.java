@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
     public class exceldata {
         public String getString(int sh, int row, int column) throws IOException {
-            String excelPath = "C:\\Users\\ravikumaa\\Desktop\\Finaldata.xlsx";
+            String excelPath = "C:\\Users\\ravikumaa\\hu_api_track\\Main_Assignment\\Finaldata.xlsx";
             FileInputStream fis = new FileInputStream(excelPath);
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(sh);
@@ -28,7 +28,7 @@ import java.io.IOException;
 
 
         public int getAge(int sh, int row, int column) throws IOException {
-            String excelPath = "C:\\Users\\ravikumaa\\Desktop\\Finaldata.xlsx";
+            String excelPath = "C:\\Users\\ravikumaa\\hu_api_track\\Main_Assignment\\Finaldata.xlsx";
             FileInputStream fis = new FileInputStream(excelPath);
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(sh);
@@ -40,7 +40,7 @@ import java.io.IOException;
             return ag;
         }
         public void writeToken(Object ObjToken, int row, int column) throws IOException {
-            String excelPath = "C:\\Users\\ravikumaa\\Desktop\\Finaldata.xlsx";
+            String excelPath = "C:\\Users\\ravikumaa\\hu_api_track\\Main_Assignment\\Finaldata.xlsx";
             FileInputStream fis = new FileInputStream(excelPath);
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(0);
@@ -57,7 +57,7 @@ import java.io.IOException;
         }
 
         public String getToken(int sht, int row, int col) throws IOException {
-            String excelPath = "C:\\Users\\ravikumaa\\Desktop\\Finaldata.xlsx";
+            String excelPath = "C:\\Users\\ravikumaa\\hu_api_track\\Main_Assignment\\Finaldata.xlsx";
             FileInputStream fis = new FileInputStream(excelPath);
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(sht);

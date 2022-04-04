@@ -11,17 +11,14 @@ public class Data {
         this.password = password;
         this.age = age;
     }
-
     public Data(String email, String password) {
 
         this.email = email;
         this.password = password;
     }
-
     public Data(String description) {
         this.description = description;
     }
-
     public String getName() {
         return name;
     }

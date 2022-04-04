@@ -36,9 +36,9 @@ public class task_1 {
     @Test(priority = 2)
     public void user_Login() throws IOException {
         exceldata ed = new exceldata();
-        String emai = ed.getString(0,1, 1);
+        String email = ed.getString(0,1, 1);
         String pass = ed.getString(0,1, 2);
-        Data dt = new Data(emai, pass);
+        Data dt = new Data(email, pass);
         Response response = given().
                 body(dt).
                 contentType(ContentType.JSON).
@@ -49,6 +49,6 @@ public class task_1 {
                 statusCode(HttpStatus.SC_OK).extract().response();
         JSONObject jsonObject = new JSONObject(response.asString());
         Object obj = jsonObject.getJSONObject("user").get("email");
-        assertThat(obj, is(emai));
+       assertThat(obj, is(email));
     }
 }
