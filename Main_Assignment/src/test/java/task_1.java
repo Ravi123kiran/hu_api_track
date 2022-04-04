@@ -10,7 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 public class task_1 {
     @Test(priority = 1)
-    public void userRegister() throws IOException {
+    public void user_Register() throws IOException {
 
         for (int i = 1; i <= 5; i++) {
             exceldata ed = new exceldata();
@@ -26,7 +26,6 @@ public class task_1 {
                     post("https://api-nodejs-todolist.herokuapp.com/user/register").
                     then().
                     log().body().
-
                     statusCode(HttpStatus.SC_CREATED).extract().response();
             JSONObject jsonObject = new JSONObject(response.asString());
             Object ObjToken = jsonObject.get("token");
@@ -35,7 +34,7 @@ public class task_1 {
         }
     }
     @Test(priority = 2)
-    public void userLogin() throws IOException {
+    public void user_Login() throws IOException {
         exceldata ed = new exceldata();
         String emai = ed.getString(0,1, 1);
         String pass = ed.getString(0,1, 2);

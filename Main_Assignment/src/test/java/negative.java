@@ -30,12 +30,12 @@ public class negative {
     }
 
     @Test(priority = 2)
-    public void InvalidUserLogin() throws IOException {
+    public void Invalid_User_Login() throws IOException {
         RestAssured.useRelaxedHTTPSValidation();
         exceldata ed = new exceldata();
-        String emai = "u344sr@gmail.com";
+        String email = "u344sr@gmail.com";
         String pass = "1132342";
-        Data dt = new Data(emai, pass);
+        Data dt = new Data(email, pass);
         Response response = given().
                 body(dt).
                 contentType(ContentType.JSON).
@@ -46,7 +46,7 @@ public class negative {
                 statusCode(HttpStatus.SC_OK).extract().response();
         JSONObject jsonObject = new JSONObject(response.asString());
         Object obj = jsonObject.getJSONObject("user").get("email");
-        assertThat(obj, is(emai));
+        assertThat(obj, is(email));
 
     }
 
@@ -57,7 +57,7 @@ public class negative {
         String token=ed.getToken(0,1,4);
         String task=ed.getToken(1,1,0);
         // data dt=new data(task);
-        String dt = "ffrrf";
+        String dt = "ghjgc";
         Response response = given().
                 body(" ").
                 headers(
