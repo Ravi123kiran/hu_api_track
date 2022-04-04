@@ -6,8 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 import java.io.File;
-public class mini_assignment_1
-{
+public class mini_assignment_1 {
     @Test
     public void test_get_call()
     {
